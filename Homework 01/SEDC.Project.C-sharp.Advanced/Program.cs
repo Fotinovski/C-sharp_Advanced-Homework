@@ -2,14 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace SEDC.Project.C_sharp.Advanced
+namespace Exam01
 {
     class Program
     {
         static void Main(string[] args)
         {
-            #region First Task
-
+         
             List<string> names = new List<string>();
 
 
@@ -42,9 +41,7 @@ namespace SEDC.Project.C_sharp.Advanced
 
             }
 
-            #endregion
-
-           
+              
             
         }
     }

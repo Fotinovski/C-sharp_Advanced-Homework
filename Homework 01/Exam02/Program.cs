@@ -6,8 +6,7 @@ namespace Exam02
     {
         static void Main(string[] args)
         {
-            #region Second Task
-
+     
             Console.WriteLine("Chek the date in this format(MM/DD/YYYY)");
             string inputDate = Console.ReadLine();
             DateTime date = DateTime.Parse(inputDate);
@@ -43,8 +42,6 @@ namespace Exam02
                 }
             }
 
-
-            #endregion
         }
     }
 }

@@ -1,7 +1,7 @@
 ﻿using System;
 
 
-namespace SEDC.ProjectExercise.Task3
+namespace Exam03
 {
     class Program
     {
