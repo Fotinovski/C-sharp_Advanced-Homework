@@ -34,8 +34,10 @@ namespace SEDC.Project.C_sharp.Advanced
 
             foreach (string name in names)
             {
-                
-                var count = trimmedInputList.Where()
+
+                var count = trimmedInputList.Where(name1 => name1.ToLower().Contains(name.ToLower()));
+
+                Console.WriteLine($"{name} appears {count.Count()} times ");
 
 
             }
@@ -47,7 +49,7 @@ namespace SEDC.Project.C_sharp.Advanced
 
 
             #endregion
-            /*Console.ReadLine();*/
+            
         }
     }
 }
