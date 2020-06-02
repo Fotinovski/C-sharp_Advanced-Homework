@@ -19,7 +19,7 @@ namespace Exam03
 
             while (isRunning)
             {
-                Console.WriteLine("Please select option: \n 1-Play \n 2-Stats \n 3-Exit ");
+                Console.WriteLine("WELCOME THE BEST GAME EVER! \nPlease select option: \n 1-Play \n 2-Stats \n 3-Exit ");
 
                 string option = Console.ReadLine();
                 switch (option)

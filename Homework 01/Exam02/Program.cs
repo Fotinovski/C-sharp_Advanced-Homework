@@ -6,20 +6,21 @@ namespace Exam02
     {
         static void Main(string[] args)
         {
-     
-            Console.WriteLine("Chek the date in this format(MM/DD/YYYY)");
-            string inputDate = Console.ReadLine();
-            DateTime date = DateTime.Parse(inputDate);
-            bool isLeapYear = DateTime.IsLeapYear(date.Year);
+                
+            bool enterAgain = true;
 
-            while (true)
+            while (enterAgain)
             {
-                if (isLeapYear && (date.Month == 2) && (date.Day >= 29))
+                Console.WriteLine("Enter date in this format(MM/DD/YYYY) to found out is it weekday or weekend and is it holiday?");
+                string inputDate = Console.ReadLine();
+                DateTime date = DateTime.Parse(inputDate);
+                bool isLeapYear = DateTime.IsLeapYear(date.Year);
+
+               /* if (isLeapYear && (date.Month == 2) && (date.Day >= 29))
                 {
                     Console.WriteLine($"The date you entered {date} does not exist");
                     break;
-                }
-
+                }*/
 
                 if ((date.Month == 1 && date.Day == 1) || (date.Month == 1 && date.Day == 7) ||
                     (date.Month == 3 && date.Day == 20) || (date.Month == 5 && date.Day == 1) ||
@@ -28,18 +29,34 @@ namespace Exam02
                     (date.Month == 12 && date.Day == 8))
                 {
                     Console.WriteLine($"This day is {date.DayOfWeek}, and its holiday");
-                    break;
+                    
                 }
+
                 else if (date.DayOfWeek >= DayOfWeek.Monday && date.DayOfWeek <= DayOfWeek.Friday)
                 {
                     Console.WriteLine($"This day is  {date.DayOfWeek} and is working day");
-                    break;
+                    
                 }
+
                 else
                 {
                     Console.WriteLine($"It's {date.DayOfWeek}, its weekend and its not working day");
-                    break;
+                   
                 }
+
+                Console.WriteLine("Do you want to enter date again?(y/n)");
+                string loop = Console.ReadLine();
+
+                if (loop == "y")
+                {
+                    enterAgain = true;
+                    Console.Clear();
+                }
+                else if (loop == "n")
+                {
+                    enterAgain = false;
+                }
+              
             }
 
         }
